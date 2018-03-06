@@ -2,15 +2,18 @@
   <div id="app">
     <img src="./assets/logo.png">
     <todo-list v-bind:todos="todos"></todo-list>
+    <create-todo v-on:create-todo="addTodo"></create-todo>
   </div>
 </template>
 
 <script>
 import TodoList from './components/TodoList'
+import CreateTodo from './components/CreateTodo'
 
 export default {
   name: 'App',
   components: {
+    CreateTodo,
     TodoList
   },
   data () {
@@ -33,14 +36,13 @@ export default {
           title: 'Todo C',
           project: 'Project C',
           done: false
-        },
-        {
-          id: 4,
-          title: 'Todo D',
-          project: 'Project D',
-          done: false
         }
       ]
+    }
+  },
+  methods: {
+    addTodo (todo) {
+      this.todos.push(todo)
     }
   }
 }

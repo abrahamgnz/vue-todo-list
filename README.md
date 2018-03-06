@@ -93,3 +93,9 @@ Como hemos hecho un link entre los valores del form y los valores del todo, edit
 Añadiremos un span con el icono de borrar en Todo. Después un método a dicho span que emita un evento `delete-todo` para el padre (TodoList) y pase el Todo (seleccionado) para borrarlo.
 
 El padre necesitara un controlador de eventos para manejar el delete.
+
+## Añadir un Todo
+
+Crearemos un nuevo componente `CreateTodo` (sera el encargado de mostrar un botón + para añadir `Todos`)
+
+Después de crear el nuevo componente lo importaremos en `App.vue`. También añadiremos un método `addTodo` para agregar todos en `App`. CreateTodo sera el encargado de emitir un evento create-todo para accionar `addTodo` en el padre.
