@@ -66,3 +66,23 @@ Para hacer render de los items en **TodoList** usaremos la directiva `v-for="ite
 ## Abstraer los *todo*(s) a su propio componente
 
 Para mantener el código mas limpio y fácil de entender moveremos lo que es un todo de `TodoList` a su propio documento `Todo`
+
+## Agregar funcionalidad de editar
+
+Añadiremos una propiedad `isEditing` al componente Todo. Esta se encargara de determinar si el Todo esta en modo editable o no. Tendremos un controlador de eventos en el span del edit que nos ayudara a desencadenar el método `showForm` cuando se le de click. (Cambiando le propiedad `isEditing` a true).
+
+Ademas del `showForm` también tendremos un `hideForm` que cerrara el form cuando demos click al botón cancel.
+
+Como hemos hecho un link entre los valores del form y los valores del todo, editar los valores del form editara inmediatamente los valores del todo. (Permitido por la directiva ***v-model***)
+
+
+```
+        <div class='field'>
+          <label>Title</label>
+          <input type='text' v-model="todo.title" >
+        </div>
+        <div class='field'>
+          <label>Project</label>
+          <input type='text' v-model="todo.project" >
+        </div>
+```
