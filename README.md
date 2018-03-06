@@ -86,3 +86,10 @@ Como hemos hecho un link entre los valores del form y los valores del todo, edit
           <input type='text' v-model="todo.project" >
         </div>
 ```
+
+## Borrar un Todo
+
+
+Añadiremos un span con el icono de borrar en Todo. Después un método a dicho span que emita un evento `delete-todo` para el padre (TodoList) y pase el Todo (seleccionado) para borrarlo.
+
+El padre necesitara un controlador de eventos para manejar el delete.
