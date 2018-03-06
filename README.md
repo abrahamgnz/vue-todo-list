@@ -24,3 +24,7 @@ Correr el proyecto
 `$ npm run dev`
 
 Ir a [http://localhost:8080/](http://localhost:8080/)
+
+## Agregar estilo
+
+Agregaremos semantic para darle estilo a nuestra aplicacion [semantic](https://semantic-ui.com/) y [SweetAlert](https://sweetalert.js.org/) para manejar los cuadros de alerta.
