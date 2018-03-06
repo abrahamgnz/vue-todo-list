@@ -99,3 +99,7 @@ El padre necesitara un controlador de eventos para manejar el delete.
 Crearemos un nuevo componente `CreateTodo` (sera el encargado de mostrar un botón + para añadir `Todos`)
 
 Después de crear el nuevo componente lo importaremos en `App.vue`. También añadiremos un método `addTodo` para agregar todos en `App`. CreateTodo sera el encargado de emitir un evento create-todo para accionar `addTodo` en el padre.
+
+## Marcar como completado un Todo
+
+Similar al delete Todo haremos un método `completeTodo` en el componente todo para emitir un evento al padre (TodoList) quien mediante otro método `completeTodo` se encargara de editar el estado del componente marcándolo como completado.
