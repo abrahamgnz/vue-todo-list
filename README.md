@@ -62,3 +62,7 @@ Nuestros *todos* tendrán 3 componentes:
 Para pasar la información de nuestro componente principal a **TodoList** usaremos la directiva `v-bind`.
 
 Para hacer render de los items en **TodoList** usaremos la directiva `v-for="item in items"`.
+
+## Abstraer los *todo*(s) a su propio componente
+
+Para mantener el código mas limpio y fácil de entender moveremos lo que es un todo de `TodoList` a su propio documento `Todo`
